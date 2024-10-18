@@ -94,7 +94,7 @@ def cart():
 
 @app.route("/checkout")
 def checkout():
-    PAYMONGO_API_KEY = "sk_test_JHpBSvsCPe1AvVNHgmj2gxzd"
+    PAYMONGO_API_KEY = " " #put your own scret key form paymongo
     url = 'https://api.paymongo.com/v1/links'
 
     total_amount = sum(item['price'] * item['quantity'] for item in session.get('cart', []))
